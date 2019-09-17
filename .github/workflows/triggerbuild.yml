@@ -6,8 +6,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-	    - name: Trigger pr-autobuild action
-    	  uses: nikhilaii93/pr-autobuild@master
+      - name: Trigger pr-autobuild action
+        uses: nikhilaii93/pr-autobuild@master
       	env:
           GITHUB_TOKEN: ${{ secrets.BOT_TOKEN }}
         	GITHUB_NAME: bot
