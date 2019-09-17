@@ -1,0 +1,16 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+    	- uses: nikhilaii93/pr-autobuild@master
+    	- name: Trigger pr-autobuild action
+      	env:
+        	GITHUB_TOKEN: ${{ secrets.BOT_TOKEN }}
+        	GITHUB_NAME: bot
+        
