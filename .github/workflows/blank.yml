@@ -10,8 +10,7 @@ jobs:
     steps:
     - uses: nikhilaii93/pr-autobuild@master
     - name: Run a one-line script
-      run: echo Hello, world!
-    - name: Run a multi-line script
-      run: |
-        echo Add other actions to build,
-        echo test, and deploy your project.
+      env:
+        GITHUB_TOKEN: ${{ secrets.BOT_TOKEN }}
+        GITHUB_NAME: bot
+        
