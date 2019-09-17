@@ -1,6 +1,6 @@
 name: CI
 
-on: [push]
+on: [issue_comment, pull_request]
 
 jobs:
   build:
